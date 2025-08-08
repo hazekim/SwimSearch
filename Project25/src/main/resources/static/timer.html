@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Swim Timer</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <!--css-->
+    <link rel="stylesheet" href="/css/style.css"/>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+</head>
+<body>
+<!-- 네비게이션 -->
+<nav class="navbar navbar-expand-lg fixed-top bg-transparent shadow-none">
+    <div class="container-fluid position-relative">
+
+        <!-- 햄버거 버튼 (왼쪽) -->
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- 로고 (가운데) -->
+        <a class="navbar-brand mx-auto text-center" href="index.html">Pool Search</a>
+
+        <!--오른쪽 공백-->
+        <div style="width: 40px;"></div>
+        <!-- 좌측 네비게이션 -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="navbar-nav ms-2 gap-2">
+                <a class="nav-link" href="info.html">Pool Information</a>
+                <a class="nav-link" href="board.html">Community</a>
+                <a class="nav-link" href="timer.html">Compete</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div id="timerClock" class="timerCard">
+    <h3>Track Your Swim!</h3>
+    <label for="distanceInput">Distance (meters): </label>
+    <input type="number" id="distanceInput" min="1" value="50" />
+    <br /><br />
+    <button id="startBtn">Start</button>
+    <button id="stopBtn" disabled>Stop</button>
+    <p>Time: <span id="timer">00:00.000</span></p>
+</div>
+
+<div class="recordCard">
+    <h2>All Swim Records</h2>
+    <table border="1" style="width:100%;">
+        <thead>
+        <tr>
+            <th>User ID</th>
+            <th>Pool ID</th>
+            <th>Distance (m)</th>
+            <th>Time</th>
+            <th>Date</th>
+        </tr>
+        </thead>
+        <tbody id="recordsTableBody"></tbody>
+    </table>
+</div>
+
+<div class="leaderboardCard">
+    <h3>🏆 Pool Leaderboard</h3>
+    <label for="poolInput">Pool ID: </label>
+    <input type="number" id="poolInput" value="1" min="1" />
+    <button onclick="loadLeaderboard()">Load</button>
+
+    <table border="1" style="width:100%;">
+        <thead>
+        <tr>
+            <th>Rank</th>
+            <th>User ID</th>
+            <th>Distance</th>
+            <th>Time</th>
+            <th>Date</th>
+        </tr>
+        </thead>
+        <tbody id="leaderboardBody"></tbody>
+    </table>
+</div>
+
+
+<script src="/js/timer.js"></script>
+<!-- Bootstrap JS + Popper-->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

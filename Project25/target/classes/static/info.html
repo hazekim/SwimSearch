@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pool Information</title>
+    <!--    css-->
+    <link rel="stylesheet" href="/css/style.css" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<!-- 네비게이션 -->
+<nav class="navbar navbar-expand-lg fixed-top bg-transparent shadow-none">
+    <div class="container-fluid position-relative">
+
+        <!-- 햄버거 버튼 (왼쪽) -->
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- 로고 (가운데) -->
+        <a class="navbar-brand mx-auto text-center" href="index.html">Pool Search</a>
+
+        <!--오른쪽 공백-->
+        <div style="width: 40px;"></div>
+        <!-- 좌측 네비게이션 -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="navbar-nav ms-2 gap-2">
+                <a class="nav-link" href="info.html">Pool Information</a>
+                <a class="nav-link" href="board.html">Community</a>
+                <a class="nav-link" href="timer.html">Compete</a>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="container mt-5" style="padding-bottom: 10px">
+    <h4>Are you ready for swim?</h4>
+</div>
+
+<!--지도영역-->
+<div id="map" style="padding-bottom: 10px"></div>
+
+<!--테이블 영역-->
+<table id="poolInfo" class="table table-striped table-hover">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Contact</th>
+        <th>Email</th>
+        <th>Length</th>
+        <th>Depth</th>
+        <th>Lane</th>
+    </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+<!--js-->
+<script src="/js/pool.js"></script>
+<!--Bootstrap JS Bundle-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<!--maps api-->
+<script src="https://maps.googleapis.com/maps/api/js?key=***REMOVED***&callback=initMap&loading=async" async defer></script>
+</body>
+</html>

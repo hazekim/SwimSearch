@@ -1,0 +1,26 @@
+<!--지도만 보는 페이지로 수정예정-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pool Maps</title>
+    <style>
+        #map {
+            height: 600px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div id="map"></div>
+
+<!-- ✅ poolmap.js 먼저 불러오기 (initMap 정의되어야 함) -->
+<script src="/js/poolmap.js"></script>
+
+<!-- ✅ maps API 로딩 (initMap 콜백 설정) -->
+<script
+        src="https://maps.googleapis.com/maps/api/"
+        async defer>
+</script>
+</body>
+</html>

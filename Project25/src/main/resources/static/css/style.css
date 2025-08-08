@@ -1,0 +1,182 @@
+
+#map{
+    height: 400px;
+    width: 80%;
+    margin: 0 auto 20px auto;
+}
+.navbar {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    z-index: 1050;
+}
+
+body {
+    padding-top: 160px;
+    font-family: "Playfair Display", serif !important;
+    font-weight: 400;
+    background-color: #B3D5F2 !important;
+}
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* 카드 공통 스타일 */
+.speech-bubble {
+    max-width: 70%;
+    padding: 1rem;
+    border-radius: 16px;
+    background: white;
+    border-top: 1px solid rgba(0, 0, 0, 0.8);
+    border-right: 4px solid rgba(0, 0, 0, 0.8);
+    border-left: 1px solid rgba(0, 0, 0, 0.8);   /* 왼쪽 세로 테두리 두껍게 */
+    border-bottom: 4px solid rgba(0, 0, 0, 0.8);
+}
+
+/* 홀수번째 카드 → 왼쪽 */
+.chat-container .speech-bubble:nth-child(odd) {
+    align-self: flex-start;
+}
+
+/* 짝수번째 카드 → 오른쪽 */
+.chat-container .speech-bubble:nth-child(even) {
+    align-self: flex-end;
+    background: white; /* 오른쪽 카드 배경 */
+}
+.orange-button {
+    display: inline-block;
+    background-color: #B3D5F2;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    border: none;
+}
+.orange-button:hover {
+    background-color: #d95e1e;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #B3D5F2;
+}
+
+th {
+    background-color: #B3D5F2;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #B3D5F2;
+}
+
+#poolInfo,
+#poolInfo thead,
+#poolInfo tbody,
+#poolInfo tr,
+#poolInfo th,
+#poolInfo td {
+    background-color: transparent !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-top: none !important;
+    border-bottom: 1px solid black !important;
+}
+#poolInfo {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#postForm {
+    background-color: white;       /* 배경 흰색 */
+    border-top: 1px solid rgba(0, 0, 0, 0.8);
+    border-right: 4px solid rgba(0, 0, 0, 0.8);
+    border-left: 1px solid rgba(0, 0, 0, 0.8);   /* 왼쪽 세로 테두리 두껍게 */
+    border-bottom: 4px solid rgba(0, 0, 0, 0.8);    /* 검정 실선 테두리 */
+    padding: 20px;                 /* 안쪽 여백 */
+    border-radius: 8px;            /* 모서리 둥글게 */
+    max-width: 800px;              /* 너비 유지 */
+    margin: auto;                  /* 가로 가운데 정렬 */
+    box-sizing: border-box;
+}
+#postForm input,
+#postForm textarea {
+    border: none;
+    outline: none; /* 클릭했을 때 나오는 파란 테두리(포커스)도 없애려면 */
+    box-shadow: none; /* 혹시 그림자 있으면 없애기 */
+    background-color: transparent; /* 배경도 투명하게 할 경우 */
+}
+
+#postForm button[type="submit"] {
+    background-color: transparent;
+    border: none;
+    color: black;
+    box-shadow: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#postForm button[type="submit"]:hover {
+    color: orange;
+}
+#postList,
+#postList th,
+#postList td{
+    color: black;
+}
+#content {
+    height: 80px; /* 원하는 픽셀 값으로 조절 */
+    resize: none; /* 크기 조절 핸들 제거 (선택사항) */
+}
+
+#replySubmitBtn,
+#replyCancelBtn {
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+}
+
+#replySubmitBtn:hover,
+#replyCancelBtn:hover {
+    color: orange;
+}
+
+#postList th {
+    border-bottom: 1px solid #000; /* 하단 검은 실선 */
+    width: auto; /* 필요 시 너비 따로 지정 가능 */
+}
+
+#timerClock,
+.recordCard,
+.leaderboardCard{
+    max-width: 70%;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: white;       /* 배경 흰색 */
+    border-top: 1px solid rgba(0, 0, 0, 0.8);
+    border-right: 4px solid rgba(0, 0, 0, 0.8);
+    border-left: 1px solid rgba(0, 0, 0, 0.8);   /* 왼쪽 세로 테두리 두껍게 */
+    border-bottom: 4px solid rgba(0, 0, 0, 0.8);
+    max-width: 800px;              /* 너비 유지 */
+    margin: 20px auto;             /* 위아래 20px, 좌우 자동(가운데 정렬) */
+    box-sizing: border-box;
+}
+#startBtn,#stopBtn{
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+}
+#startBtn:hover,#stopBtn:hover{
+    color: orange;
+}
+
+
